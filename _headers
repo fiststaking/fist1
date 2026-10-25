@@ -1,0 +1,9 @@
+# Security headers for static hosts that support them (Netlify, Cloudflare Pages).
+# nginx / Apache / GitHub Pages ignore this file: configure the equivalent
+# headers there instead. See frontend/README.md.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://bsc-dataseed.binance.org https://bsc-dataseed1.binance.org https://bsc-dataseed2.binance.org https://bsc-dataseed3.binance.org https://bsc-dataseed4.binance.org https://bsc.publicnode.com wss:; frame-ancestors 'none'; base-uri 'self'; form-action 'none'
